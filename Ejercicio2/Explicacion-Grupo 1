@@ -1,0 +1,3 @@
+Elegimos el patron Composite porque nos permite definir objetos que pueden
+contener objetos del mismo tipo de manera "recursiva" (carpetas adentro de carpetas
+por ejemplo). 
