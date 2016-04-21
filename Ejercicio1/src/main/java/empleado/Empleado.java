@@ -2,13 +2,12 @@ package empleado;
 
 public abstract class Empleado {
 	protected int cantidadHoras;
-	
 	protected int salarioFamiliar;
+
 	
-	//Uso un Template method para la creacion de las subclases empleados
-	//donde voy a redefinir los métodos dependiendo de los requisitos pedidos.
-	//Tambien modifico el patrón y agrego 2 atributos comunes a las 2 clases
-	//de empleados.
+	//Uso un Template method para el calculo de sueldo, defino operaciones abstractas
+	//que las subclases tienen que implementar y el template method calcularSueldo()
+	//que calcula el sueldo de manera "generica" para todos los empleados.
 	
 	public int calcularSueldo(){
 		int sueldo = monetizarHoras() + calcularBono() + obtenerSalarioFamiliar() - obtenerObraSocial();
@@ -19,9 +18,7 @@ public abstract class Empleado {
 	
 	protected abstract int calcularBono();
 	
-	protected int obtenerSalarioFamiliar(){
-		return salarioFamiliar;
-	}
+	protected abstract int obtenerSalarioFamiliar();
 	
 	protected abstract int obtenerObraSocial();
 	
@@ -30,6 +27,8 @@ public abstract class Empleado {
 	}
 	
 	public abstract void pasarMes();
+	//metodo para reiniciar las horas de trabajo y actualizar la antiguedad
+	//en el caso de los empleados de planta permanente
 	
 	
 

@@ -1,15 +1,16 @@
 package empleado;
 
 public class Permanente extends Empleado {
-	private int antiguedad;
-	private int descObraSocial;
+	protected int antiguedad;
+	protected int descObraSocial;
 	
-	public Permanente(int nuevaAntiguedad, int descuentoOS){
-		cantidadHoras = 0;
-		antiguedad=nuevaAntiguedad;
-		descObraSocial = descuentoOS;
-		
+	public Permanente(){
+		cantidadHoras=0;
+		salarioFamiliar=0;
+		antiguedad=0;
+		descObraSocial=0;
 	}
+	
 	//Aca quise hacer que los metodos sean privados, como muestra el ejemplo del apunte
 	//pero me dice que no se muede modificar la visibilidad.
 	@Override
@@ -31,6 +32,10 @@ public class Permanente extends Empleado {
 	public void pasarMes() {
 		cantidadHoras = 0;
 		antiguedad = antiguedad + 1/12;
+	}
+	@Override
+	protected int obtenerSalarioFamiliar() {
+		return salarioFamiliar;
 	}
 
 }

@@ -1,7 +1,7 @@
 <project>
  <modelVersion>4.0.0</modelVersion>
- <groupId>Guia-1-ej-1</groupId>
- <artifactId>Guia-1-ej-1</artifactId>
+ <groupId>Guia-1-ej2</groupId>
+ <artifactId>Guia-1-ej-2</artifactId>
  <version>1</version>
 
  <build>

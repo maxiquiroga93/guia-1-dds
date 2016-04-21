@@ -1,0 +1,8 @@
+Usamos 2 patrones para el diseño del ejercicio 1.
+El primero es el patron Builder usando como director a la empresa y un Builder para
+ cada clase de empleado (PermanenteBuilder y TemporalBuilder) que implementan la 
+interfaz BuilderEmpleado.
+El segundo patron utilizado es el template method, usado en la operacion
+calcularSueldo() (que depende de otros metodos abstractos) de manera de crear una 
+solucion general para todos las clases de empleados obligandolos a definir los
+metodos abstractos segun sus especificaciones.

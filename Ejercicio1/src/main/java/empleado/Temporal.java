@@ -1,6 +1,11 @@
 package empleado;
 
 public class Temporal extends Empleado {
+	
+	public Temporal(){
+		cantidadHoras=0;
+		salarioFamiliar=0;
+	}
 
 	@Override
 	protected int monetizarHoras() {
@@ -20,6 +25,11 @@ public class Temporal extends Empleado {
 	@Override
 	public void pasarMes() {
 		cantidadHoras = 0;
+	}
+
+	@Override
+	protected int obtenerSalarioFamiliar() {
+		return salarioFamiliar;
 	}
 
 }
